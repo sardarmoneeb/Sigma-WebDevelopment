@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            height: 40vh;
+            width: 70vw;
+        }
+
+        .box {
+            border: 2px solid black;
+            background-color: aqua;
+            height: 10vh;
+            width: 12vw;
+            animation-name: Moneeb;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            /* animation-play-state: paused; */
+            /* animation: Moneeb 3s 1s infinite alternate-reverse ,Moneeb2  3s 1s infinite  reverse; */
+
+        }
+
+        @keyframes Moneeb {
+            from {
+                background-color: blue;
+            }
+
+            to {
+                background-color: aqua;
+                transform: translateX(500px);
+            }
+        }
+        /* @keyframes Moneeb2 { */
+            10%{
+                transform: rotate(10deg);
+            }
+            40%{
+                transform: rotate(40deg);
+            }
+            60%{
+                transform: rotate(60deg);
+            }
+            80%{
+                transform: rotate(80deg);
+            }
+            100%{
+                transform: rotate(100deg);
+            }
+            }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+
+</html>
